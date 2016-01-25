@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular-Routing-Weekend</title>
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheets">
+    <link href="assets/styles/main.css" rel="stylesheets">
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="vendors/angular-route/angular-route.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+    <base href="/">
+    
+</head>
+<body ng-controller="MainController">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Stuff to put here</a>
+    
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="/address"><button>Address</button></a></li>
+                            <li><a href="/order"><button>Order</button></a></li>
+                            
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </nav>
+    
+    <select ng-model="userId">
+        <option value="" disabled><!--Select User--></option>
+        <option ng-repeat="user in users" value={{user.id}}> {{user.name}}</option>
+    </select>
+    
+    <div ng-view>
+
+    </div>
+
+</body>
+</html>

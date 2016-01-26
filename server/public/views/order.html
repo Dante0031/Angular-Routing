@@ -1,1 +1,18 @@
 <p>Hello World! Order</p>
+
+<select ng-model="userId" ng-change="grabOrd()">
+    <!--<option ng-repeat="address in addresses" value={{address.id}}> {{address.name}}</option>-->
+    <option ng-repeat="user in users" value={{user.id}}> {{user.name}}</option>
+</select>
+
+<div ng-repeat="order in orders">Order id: {{order.order_id}}<br>User id: {{order.user_id}}<br> Shipping address: {{order.ship_address_id}}<br> Amount: {{order.amount}}<br> Order Date: {{order.order_date}}</div>
+
+
+<form name="myForm">
+    <!--<label for="input">Pick a date:</label>-->
+    <input type="date" id="start" name="input" ng-model="startvalue"
+           placeholder="yyyy-MM-dd" min="1950-01-01" max="now" required />
+    <input type="date" id="end" name="input" ng-model="endvalue"
+           placeholder="yyyy-MM-dd" min="1950-01-01" max="now" required />
+    <div role="alert"></div>
+</form>

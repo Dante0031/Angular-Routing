@@ -1,3 +1,12 @@
 <p>Hello World! Address</p>
 
-<div ng-repeat="address in addresses">{{addresses}}</div>2
+<select ng-model="userId" ng-change="grabAdd()">
+    <!--<option ng-repeat="address in addresses" value={{address.id}}> {{address.name}}</option>-->
+    <option ng-repeat="user in users" value={{user.id}}> {{user.name}}</option>
+</select>
+
+    <div ng-repeat="address in addresses">{{address.address_id}} {{address.address_type}} {{address.address_street}}  {{address.address_city}} {{address.address_state}}</div>
+<!--{{userId}}-->
+<!--{{addresses}}-->
+
+

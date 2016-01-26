@@ -11,9 +11,9 @@ app.use('/', index);
 
 app.use('/api', api);
 
-app.get('/*', function(request, response){
-    response.redirect('/')
-});
+//app.get('/*', function(request, response){
+//    response.redirect('/')
+//});
 
 
 var server = app.listen(3000, function(){
